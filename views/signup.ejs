@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Signup</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <div id="container">
+      <form action="/user/signup" method="post" enctype="multipart/form-data" class="w-25 p-3">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+          formtarget="name" 
+          name="name" 
+          type="text" 
+          class="form-control" 
+          id="name"
+          autocomplete="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input 
+          formtarget="email"
+          name="email" 
+          type="email" 
+          class="form-control" 
+          id="email"
+          autocomplete="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="password"
+            autocomplete="new-password"
+          />
+        </div>
+        <div class="mb-3">
+                <label for="profilePic" class="form-label">Profile picture</label>
+                <input type="file" class="form-control" id="profilePic" name="profilePic" aria-describedby="profilePic">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <%- include('./partials/script') %>
+  </body>
+</html>
